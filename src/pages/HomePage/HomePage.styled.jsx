@@ -7,8 +7,6 @@ export const HomePageBackgroundImage = styled.div`
   background-position: center;
   transform: scaleX(-1);
 
-  height: 500px;
-
   height: calc(100vh - 72px);
 `;
 

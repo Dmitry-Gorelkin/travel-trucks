@@ -3,7 +3,7 @@ import Layout from './Layout';
 import { lazy } from 'react';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
-const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
 function App() {
   return (

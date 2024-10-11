@@ -1,4 +1,4 @@
-import { Button } from '../../components/UI/Button/Button.styled';
+import { ButtonLink } from '../../components/UI/ButtonLink/ButtonLink.styled';
 import { Container } from '../../components/UI/Conteiner/Conteiner.styled';
 import {
   HomePageBackgroundImage,
@@ -14,7 +14,7 @@ const HomePage = () => {
         <HomePageContainer>
           <HomePageTitle>Campers of your dreams</HomePageTitle>
           <HomePageText>You can find everything you want in our catalog</HomePageText>
-          <Button>View Now</Button>
+          <ButtonLink to="catalog">View Now</ButtonLink>
         </HomePageContainer>
       </Container>
     </HomePageBackgroundImage>
