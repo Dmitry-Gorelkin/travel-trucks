@@ -1,10 +1,11 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from './Header/Header';
 
 const Layout = () => {
   return (
     <>
-      <p>heder</p>
+      <Header />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

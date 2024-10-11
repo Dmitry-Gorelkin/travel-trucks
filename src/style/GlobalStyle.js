@@ -7,32 +7,17 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-
     margin: 0;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 16px; /* Базовый размер шрифта */
-    line-height: 1.5; 
 
     z-index: 1;
 
-    color: ${p => p.theme.colors.text};
-    background-color: ${p => p.theme.colors.background};
+    font-family: 'Inter', sans-serif; 
 
-
-
-    @media screen and (min-width: 768px) {
-        font-size: 18px;
-    }
-
-    @media screen and (min-width: 1440px) {
-        font-size: 20px;
-    }
+    background-color: ${p => p.theme.colors.white};
     }
 
     html, body, #root {
-        height: 100%;
+        /* height: 100%; */
         margin: 0;
     }
 
@@ -43,17 +28,10 @@ export const GlobalStyle = createGlobalStyle`
     h5,
     h6 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-    color: ${p => p.theme.colors.title};
     }
 
     p {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-
-    color: ${p => p.theme.colors.text};
     }
     
     ul,
@@ -67,11 +45,6 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
     max-width: 100%;
     height: auto;
-    }
-
-    code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
     }
     
     .ReactModal__Body--open {
