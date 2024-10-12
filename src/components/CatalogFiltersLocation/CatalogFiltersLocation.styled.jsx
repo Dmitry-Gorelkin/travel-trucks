@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CatalogLocationTitle = styled.h2`
+export const CatalogFiltersLocationTitle = styled.h2`
   margin-bottom: 8px;
 
   font-family: Inter;
@@ -12,11 +12,11 @@ export const CatalogLocationTitle = styled.h2`
   color: ${p => p.theme.colors.gray};
 `;
 
-export const CatalogLocationInputContainer = styled.div`
+export const CatalogFiltersLocationInputContainer = styled.div`
   position: relative;
 `;
 
-export const CatalogLocationInput = styled.input`
+export const CatalogFiltersLocationInput = styled.input`
   display: block;
 
   padding: 18px 46px;
@@ -39,7 +39,7 @@ export const CatalogLocationInput = styled.input`
     color: ${p => p.theme.colors.gray};
   }
 `;
-export const CatalogLocationIcon = styled.svg`
+export const CatalogFiltersLocationIcon = styled.svg`
   display: block;
 
   position: absolute;
@@ -50,5 +50,5 @@ export const CatalogLocationIcon = styled.svg`
   left: 18px;
   top: 18px;
 
-  fill: ${p => (p.isFilled ? p.theme.colors.main : p.theme.colors.gray)};
+  fill: ${p => (p.isfilled === '' ? p.theme.colors.gray : p.theme.colors.main)};
 `;
