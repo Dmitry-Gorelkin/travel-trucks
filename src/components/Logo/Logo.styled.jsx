@@ -5,7 +5,6 @@ export const LogoLink = styled(Link)`
   display: block;
 
   position: absolute;
-
   left: 0;
 
   cursor: pointer;

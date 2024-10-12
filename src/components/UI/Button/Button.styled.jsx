@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
+  width: 166px;
+
   padding: 16px 60px;
 
   border: none;
@@ -14,8 +16,9 @@ export const Button = styled.button`
   text-align: left;
 
   color: ${p => p.theme.colors.white};
-
   background-color: ${p => p.theme.colors.button};
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
