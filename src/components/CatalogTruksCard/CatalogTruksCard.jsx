@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import icon from '../../assets/icons.svg';
+import TrukCategoriesList from '../TrukCategoriesList/TrukCategoriesList';
 import { Button } from '../UI/Button/Button.styled';
 import {
   CatalogTruksCardContainer,
@@ -14,21 +16,19 @@ import {
   CatalogTruksCardText,
   CatalogTruksCardIconMap,
   CatalogTruksCardDescription,
-  CatalogTruksCardCategoriesList,
-  CatalogTruksCardCategoriesItem,
-  CatalogTruksCardCategoriesIcon,
-  CatalogTruksCardCategoriesText,
 } from './CatalogTruksCard.styled';
 
 const CatalogTruksCard = ({ truk }) => {
+  const navigate = useNavigate();
   const {
-    gallery,
+    id,
+    gallery = [],
     name,
     price,
     rating,
-    reviews,
+    reviews = [],
     location,
-    description,
+    description = '',
     transmission,
     engine,
     kitchen,
@@ -78,65 +78,18 @@ const CatalogTruksCard = ({ truk }) => {
           </CatalogTruksCardDescription>
         </div>
 
-        <CatalogTruksCardCategoriesList>
-          {transmission === 'automatic' && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#diagram`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>Automatic</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-          <CatalogTruksCardCategoriesItem>
-            <CatalogTruksCardCategoriesIcon>
-              <use href={`${icon}#engine`}></use>
-            </CatalogTruksCardCategoriesIcon>
-            <CatalogTruksCardCategoriesText>{engine}</CatalogTruksCardCategoriesText>
-          </CatalogTruksCardCategoriesItem>
-          {kitchen && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#cup-hot`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>Kitchen</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-          {AC && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#wind`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>AC</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-          {TV && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#tv`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>TV</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-          {radio && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#radio`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>Radio</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-          {bathroom && (
-            <CatalogTruksCardCategoriesItem>
-              <CatalogTruksCardCategoriesIcon>
-                <use href={`${icon}#bi_droplet`}></use>
-              </CatalogTruksCardCategoriesIcon>
-              <CatalogTruksCardCategoriesText>Bathroom</CatalogTruksCardCategoriesText>
-            </CatalogTruksCardCategoriesItem>
-          )}
-        </CatalogTruksCardCategoriesList>
+        <TrukCategoriesList
+          transmission={transmission}
+          engine={engine}
+          kitchen={kitchen}
+          ac={AC}
+          tv={TV}
+          radio={radio}
+          bathroom={bathroom}
+        />
 
         <div>
-          <Button>Show more</Button>
+          <Button onClick={() => navigate(`/catalog/${id}`)}>Show more</Button>
         </div>
       </CatalogTruksCardSpecification>
     </CatalogTruksCardContainer>

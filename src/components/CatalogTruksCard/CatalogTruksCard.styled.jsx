@@ -103,39 +103,39 @@ export const CatalogTruksCardDescription = styled.p`
   color: ${p => p.theme.colors.text};
 `;
 
-export const CatalogTruksCardCategoriesList = styled.ul`
-  display: flex;
+// export const CatalogTruksCardCategoriesList = styled.ul`
+//   display: flex;
 
-  flex-wrap: wrap;
-  gap: 8px;
-`;
+//   flex-wrap: wrap;
+//   gap: 8px;
+// `;
 
-export const CatalogTruksCardCategoriesItem = styled.li`
-  display: flex;
-  gap: 8px;
+// export const CatalogTruksCardCategoriesItem = styled.li`
+//   display: flex;
+//   gap: 8px;
 
-  padding: 12px 18px;
+//   padding: 12px 18px;
 
-  border-radius: 100px;
+//   border-radius: 100px;
 
-  background-color: ${p => p.theme.colors.badges};
-`;
+//   background-color: ${p => p.theme.colors.badges};
+// `;
 
-export const CatalogTruksCardCategoriesIcon = styled.svg`
-  display: block;
-  width: 20px;
-  height: 20px;
-`;
+// export const CatalogTruksCardCategoriesIcon = styled.svg`
+//   display: block;
+//   width: 20px;
+//   height: 20px;
+// `;
 
-export const CatalogTruksCardCategoriesText = styled.span`
-  display: block;
+// export const CatalogTruksCardCategoriesText = styled.span`
+//   display: block;
 
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: center;
-  text-transform: capitalize;
+//   font-family: Inter;
+//   font-size: 16px;
+//   font-weight: 500;
+//   line-height: 20px;
+//   text-align: center;
+//   text-transform: capitalize;
 
-  color: ${p => p.theme.colors.main};
-`;
+//   color: ${p => p.theme.colors.main};
+// `;
