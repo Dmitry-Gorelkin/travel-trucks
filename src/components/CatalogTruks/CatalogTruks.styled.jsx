@@ -5,6 +5,8 @@ export const CatalogTruksContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
+  width: 888px;
+
   gap: 40px;
 `;
 
@@ -14,9 +16,3 @@ export const CatalogTruksList = styled.ul`
 
   gap: 32px;
 `;
-
-// export const CatalogTruksLoaderBox = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;

@@ -1,5 +1,11 @@
+import { CardTrukBookingContainer } from './CardTrukBooking.styled';
+
 const CardTrukBooking = () => {
-  return <p>CardTrukBooking</p>;
+  return (
+    <CardTrukBookingContainer>
+      <p>CardTrukBooking</p>
+    </CardTrukBookingContainer>
+  );
 };
 
 export default CardTrukBooking;
