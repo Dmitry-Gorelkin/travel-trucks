@@ -1,5 +1,11 @@
 import TrukCategoriesList from '../TrukCategoriesList/TrukCategoriesList';
-import { CardTrukFeaturesContainer } from './CardTrukFeatures.styled';
+import {
+  CardTrukFeaturesContainer,
+  CardTrukFeaturesList,
+  CardTrukFeaturesItem,
+  CardTrukFeaturesText,
+  CardTrukFeaturesTitle,
+} from './CardTrukFeatures.styled';
 
 const CardTrukFeatures = ({ truk }) => {
   return (
@@ -15,16 +21,34 @@ const CardTrukFeatures = ({ truk }) => {
       />
 
       <div>
-        <p>Vehicle details</p>
+        <CardTrukFeaturesTitle>Vehicle details</CardTrukFeaturesTitle>
 
-        <ul>
-          <li>Form {truk.form}</li>
-          <li>Length {truk.length}</li>
-          <li>Width {truk.width}</li>
-          <li>Height {truk.height}</li>
-          <li>Tank {truk.tank}</li>
-          <li>Consumption {truk.consumption}</li>
-        </ul>
+        <CardTrukFeaturesList>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Form</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.form}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Length</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.length}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Width</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.width}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Height</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.height}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Tank</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.tank}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+          <CardTrukFeaturesItem>
+            <CardTrukFeaturesText>Consumption</CardTrukFeaturesText>
+            <CardTrukFeaturesText>{truk.consumption}</CardTrukFeaturesText>
+          </CardTrukFeaturesItem>
+        </CardTrukFeaturesList>
       </div>
     </CardTrukFeaturesContainer>
   );

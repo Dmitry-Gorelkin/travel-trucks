@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
 export const ButtonLoadMore = styled.button`
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 145px;
-  height: 56px; */
   padding: 16px 32px;
 
   border: 1px solid ${p => p.theme.colors.grayLight};

@@ -14,11 +14,8 @@ const CatalogTruks = () => {
       try {
         setLoading(true);
         const respons = await axios('https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers');
-        console.log(respons.data);
 
         setTruks(respons.data.items);
-
-        console.log(new Set(respons.data.items.map(e => e.form)));
       } catch (error) {
         console.log(error);
       } finally {

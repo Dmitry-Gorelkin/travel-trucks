@@ -63,8 +63,7 @@ const CardTruk = () => {
                   <use href={`${icon}#star-gold`}></use>
                 </CardTrukReviewsLocationIcon>
                 <CardTrukReviewsLocationText>
-                  {truk.rating}
-                  Reviews
+                  {truk.rating}({truk.reviews ? truk.reviews.length : null} Reviews)
                 </CardTrukReviewsLocationText>
               </CardTrukReviewsLocationBox>
 
