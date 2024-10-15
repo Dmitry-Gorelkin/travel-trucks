@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CatalogTruksCardContainer = styled.div`
+export const CatalogTruksCardContainer = styled.li`
   display: flex;
   gap: 24px;
 
