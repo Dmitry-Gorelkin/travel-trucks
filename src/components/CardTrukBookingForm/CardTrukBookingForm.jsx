@@ -1,5 +1,9 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-// import { FormContainer } from './CardTrukBookingForm.styled';
+import {
+  CardTrukBookingFormForm,
+  CardTrukBookingFormField,
+  CardTrukBookingFormErrorMessage,
+} from './CardTrukBookingForm.styled';
 import { Button } from '../UI/Button/Button.styled';
 import * as Yup from 'yup';
 
@@ -17,13 +21,11 @@ const CardTrukBookingForm = () => {
   // Схема валидации
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(2, 'Минимум 2 символа')
-      .max(10, 'Максимум 10 символов')
-      .required('Обязательное поле'),
-    email: Yup.string().email('Некорректный email').required('Обязательное поле'),
-    date: Yup.date()
-      .min(today, 'Дата должна быть не ранее сегодняшнего дня')
-      .required('Обязательное поле'),
+      .min(2, 'Minimum 2 characters')
+      .max(10, 'Maximum 10 characters')
+      .required('Required field'),
+    email: Yup.string().email('Invalid email').required('Required field'),
+    date: Yup.date().min(today, 'Date must not be earlier than today').required('Required field'),
     comment: Yup.string(),
   });
 
@@ -37,35 +39,36 @@ const CardTrukBookingForm = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <CardTrukBookingFormForm>
           <div>
-            <label htmlFor="name">Имя</label>
-            <Field type="text" name="name" />
-            <ErrorMessage name="name" component="div" className="error" />
+            <CardTrukBookingFormField type="text" name="name" placeholder="Name*" />
+            <CardTrukBookingFormErrorMessage name="name" component="div" className="error" />
           </div>
 
           <div>
-            <label htmlFor="email">Email</label>
-            <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" className="error" />
+            <CardTrukBookingFormField type="email" name="email" placeholder="Email*" />
+            <CardTrukBookingFormErrorMessage name="email" component="div" className="error" />
           </div>
 
           <div>
-            <label htmlFor="date">Дата</label>
-            <Field type="date" name="date" min={today} />
-            <ErrorMessage name="date" component="div" className="error" />
+            <CardTrukBookingFormField
+              type="date"
+              name="date"
+              min={today}
+              placeholder="Booking date*"
+            />
+            <CardTrukBookingFormErrorMessage name="date" component="div" className="error" />
           </div>
 
           <div>
-            <label htmlFor="comment">Комментарий</label>
-            <Field as="textarea" name="comment" />
-            <ErrorMessage name="comment" component="div" className="error" />
+            <CardTrukBookingFormField as="textarea" name="comment" placeholder="Comment" />
+            <CardTrukBookingFormErrorMessage name="comment" component="div" className="error" />
           </div>
 
           <Button type="submit" disabled={isSubmitting}>
             Отправить
           </Button>
-        </Form>
+        </CardTrukBookingFormForm>
       )}
     </Formik>
   );
