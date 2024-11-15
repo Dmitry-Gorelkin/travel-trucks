@@ -7,8 +7,11 @@ export const CardTrukBookingFormForm = styled(Form)`
   justify-content: center;
   align-items: center;
   gap: 14px;
+`;
 
-  /* margin-bottom: 24px; */
+export const CardTrukBookingFormContainer = styled.div`
+  display: block;
+  width: 100%;
 `;
 
 export const CardTrukBookingFormField = styled(Field)`
@@ -33,6 +36,7 @@ export const CardTrukBookingFormField = styled(Field)`
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 `;
+
 export const CardTrukBookingFormErrorMessage = styled(ErrorMessage)`
   color: ${p => p.theme.colors.buttonHover};
 `;

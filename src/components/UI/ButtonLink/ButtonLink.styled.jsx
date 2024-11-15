@@ -2,7 +2,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ButtonLink = styled(Link)`
-  padding: 16px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 173px;
+  height: 56px;
+
+  padding: 0;
+
+  /* padding: 16px 60px; */ //старое решение
 
   border: none;
   border-radius: 200px;

@@ -1,9 +1,17 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  padding: 16px 60px;
+  width: 166px;
+  height: 56px;
+
+  padding: 0;
+
+  /* display: block; */ //старое решение
+  /* padding: 16px 60px; */ //старое решение
 
   border: none;
   border-radius: 200px;

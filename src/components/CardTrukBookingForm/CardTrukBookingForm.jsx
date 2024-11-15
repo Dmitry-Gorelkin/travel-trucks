@@ -1,6 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import {
   CardTrukBookingFormForm,
+  CardTrukBookingFormContainer,
   CardTrukBookingFormField,
   CardTrukBookingFormErrorMessage,
 } from './CardTrukBookingForm.styled';
@@ -40,17 +41,17 @@ const CardTrukBookingForm = () => {
     >
       {({ isSubmitting }) => (
         <CardTrukBookingFormForm>
-          <div>
+          <CardTrukBookingFormContainer>
             <CardTrukBookingFormField type="text" name="name" placeholder="Name*" />
             <CardTrukBookingFormErrorMessage name="name" component="div" className="error" />
-          </div>
+          </CardTrukBookingFormContainer>
 
-          <div>
+          <CardTrukBookingFormContainer>
             <CardTrukBookingFormField type="email" name="email" placeholder="Email*" />
             <CardTrukBookingFormErrorMessage name="email" component="div" className="error" />
-          </div>
+          </CardTrukBookingFormContainer>
 
-          <div>
+          <CardTrukBookingFormContainer>
             <CardTrukBookingFormField
               type="date"
               name="date"
@@ -58,12 +59,12 @@ const CardTrukBookingForm = () => {
               placeholder="Booking date*"
             />
             <CardTrukBookingFormErrorMessage name="date" component="div" className="error" />
-          </div>
+          </CardTrukBookingFormContainer>
 
-          <div>
+          <CardTrukBookingFormContainer>
             <CardTrukBookingFormField as="textarea" name="comment" placeholder="Comment" />
             <CardTrukBookingFormErrorMessage name="comment" component="div" className="error" />
-          </div>
+          </CardTrukBookingFormContainer>
 
           <Button type="submit" disabled={isSubmitting}>
             Отправить
