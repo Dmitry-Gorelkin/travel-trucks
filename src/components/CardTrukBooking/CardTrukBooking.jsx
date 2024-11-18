@@ -76,7 +76,7 @@ const CardTrukBooking = () => {
             </CardTrukBookingFormContainer>
 
             <Button type="submit" disabled={isSubmitting}>
-              Отправить
+              Send
             </Button>
           </CardTrukBookingForm>
         )}

@@ -53,6 +53,7 @@ export const CardTrukBookingFormContainer = styled.div`
 export const CardTrukBookingFormField = styled(Field)`
   display: block;
   width: 100%;
+  height: 60px;
 
   padding: 18px;
 
@@ -64,6 +65,8 @@ export const CardTrukBookingFormField = styled(Field)`
 
   outline: none;
 
+  resize: none;
+
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -71,8 +74,23 @@ export const CardTrukBookingFormField = styled(Field)`
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+
+  ${p =>
+    p.as === 'textarea' &&
+    `
+    resize: none;
+    height: 118px; 
+  `}
 `;
 
 export const CardTrukBookingFormErrorMessage = styled(ErrorMessage)`
+  padding-left: 18px;
+
   color: ${p => p.theme.colors.buttonHover};
+
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
 `;
