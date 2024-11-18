@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ErrorMessage, Field, Form } from 'formik';
 
 export const CardTrukBookingContainer = styled.div`
   display: flex;
@@ -34,4 +35,44 @@ export const CardTrukBookingText = styled.p`
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+`;
+
+export const CardTrukBookingForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+`;
+
+export const CardTrukBookingFormContainer = styled.div`
+  display: block;
+  width: 100%;
+`;
+
+export const CardTrukBookingFormField = styled(Field)`
+  display: block;
+  width: 100%;
+
+  padding: 18px;
+
+  color: ${p => p.theme.colors.gray};
+  background-color: ${p => p.theme.colors.inputs};
+
+  border-radius: 12px;
+  border: none;
+
+  outline: none;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+`;
+
+export const CardTrukBookingFormErrorMessage = styled(ErrorMessage)`
+  color: ${p => p.theme.colors.buttonHover};
 `;

@@ -102,8 +102,8 @@ const CardTruk = () => {
             </CardTrukFeaturesReviewsItem>
           </CardTrukFeaturesReviewsList>
           <CardTrukFeaturesReviewsBookingContainer>
-            {section === 'features' && <CardTrukFeatures truk={truk} />}
-            {section === 'reviews' && <CardTrukReviews reviews={truk.reviews} />}
+            {section === 'features' && <CardTrukFeatures />}
+            {section === 'reviews' && <CardTrukReviews />}
 
             <CardTrukBooking />
           </CardTrukFeaturesReviewsBookingContainer>

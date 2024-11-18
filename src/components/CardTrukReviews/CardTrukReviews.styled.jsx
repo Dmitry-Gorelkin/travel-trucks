@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 
-export const CardTrukReviewsContainer = styled.ul`
+export const CardTrukReviewsContainer = styled.div`
+  width: 631px;
+  height: 588px;
+`;
+
+export const CardTrukReviewsContainerLoader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+`;
+
+export const CardTrukReviewsList = styled.ul`
   display: flex;
   flex-direction: column;
 
   gap: 44px;
 
-  width: 631px;
-  height: 588px;
+  gap: 16px;
 `;
 
 export const CardTrukReviewsItem = styled.li`

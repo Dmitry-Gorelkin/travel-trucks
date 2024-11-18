@@ -15,6 +15,15 @@ export const CardTrukFeaturesContainer = styled.div`
   background-color: ${p => p.theme.colors.inputs};
 `;
 
+export const CardTrukFeaturesContainerLoader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+`;
+
 export const CardTrukFeaturesTitle = styled.p`
   display: block;
 
