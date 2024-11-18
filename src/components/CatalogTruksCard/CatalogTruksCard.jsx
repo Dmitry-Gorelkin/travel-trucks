@@ -89,7 +89,7 @@ const CatalogTruksCard = ({ truk }) => {
         />
 
         <div>
-          <Button onClick={() => navigate(`/catalog/${id}`)}>Show more</Button>
+          <Button onClick={() => navigate(`/catalog/${id}/features`)}>Show more</Button>
         </div>
       </CatalogTruksCardSpecification>
     </CatalogTruksCardContainer>

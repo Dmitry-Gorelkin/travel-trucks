@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import icon from '../../assets/icons.svg';
-import CardTrukReviews from '../CardTrukReviews/CardTrukReviews';
-import CardTrukFeatures from '../CardTrukFeatures/CardTrukFeatures';
 import CardTrukBooking from '../CardTrukBooking/CardTrukBooking';
 import {
   CardTrukTitleContainer,
@@ -25,7 +23,6 @@ import LoaderPuff from '../UI/LoaderPuff/LoaderPuff';
 const CardTruk = () => {
   const { id } = useParams();
   const [truk, setTruk] = useState({});
-  const [section, setSection] = useState('features');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -43,10 +40,6 @@ const CardTruk = () => {
     };
     fetch();
   }, [id]);
-
-  const handleSectionClick = section => {
-    setSection(section);
-  };
 
   return (
     <>
@@ -88,23 +81,11 @@ const CardTruk = () => {
           </CardTrukImageList>
           <CardTrukDescriptionText>{truk.description}</CardTrukDescriptionText>
           <CardTrukFeaturesReviewsList>
-            <CardTrukFeaturesReviewsItem
-              isactive={`${section === 'features'}`}
-              onClick={() => handleSectionClick('features')}
-            >
-              Features
-            </CardTrukFeaturesReviewsItem>
-            <CardTrukFeaturesReviewsItem
-              isactive={`${section === 'reviews'}`}
-              onClick={() => handleSectionClick('reviews')}
-            >
-              Reviews
-            </CardTrukFeaturesReviewsItem>
+            <CardTrukFeaturesReviewsItem to="features">Features</CardTrukFeaturesReviewsItem>
+            <CardTrukFeaturesReviewsItem to="reviews">Reviews</CardTrukFeaturesReviewsItem>
           </CardTrukFeaturesReviewsList>
           <CardTrukFeaturesReviewsBookingContainer>
-            {section === 'features' && <CardTrukFeatures />}
-            {section === 'reviews' && <CardTrukReviews />}
-
+            <Outlet />
             <CardTrukBooking />
           </CardTrukFeaturesReviewsBookingContainer>
         </div>

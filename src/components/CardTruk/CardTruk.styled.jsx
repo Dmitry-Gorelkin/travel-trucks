@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const CardTrukContainer = styled.div``;
@@ -96,7 +97,7 @@ export const CardTrukDescriptionText = styled.p`
   color: ${p => p.theme.colors.text};
 `;
 
-export const CardTrukFeaturesReviewsList = styled.ul`
+export const CardTrukFeaturesReviewsList = styled.div`
   display: flex;
 
   gap: 40px;
@@ -107,12 +108,13 @@ export const CardTrukFeaturesReviewsList = styled.ul`
   border-bottom: 1px solid ${p => p.theme.colors.grayLight};
 `;
 
-export const CardTrukFeaturesReviewsItem = styled.li`
+export const CardTrukFeaturesReviewsItem = styled(NavLink)`
   font-family: Inter;
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
   text-align: left;
+  text-decoration: none;
 
   color: ${p => p.theme.colors.main};
 
@@ -128,9 +130,15 @@ export const CardTrukFeaturesReviewsItem = styled.li`
     width: 100%;
     height: 3px;
     background-color: ${p => p.theme.colors.button};
-    transform: scaleX(${p => (p.isactive === 'true' ? 1 : 0)});
+    transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
+  }
+
+  &.active {
+    &::after {
+      transform: scaleX(1);
+    }
   }
 `;
 
