@@ -5,15 +5,6 @@ export const CardTrukReviewsContainer = styled.div`
   height: 588px;
 `;
 
-export const CardTrukReviewsContainerLoader = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-`;
-
 export const CardTrukReviewsList = styled.ul`
   display: flex;
   flex-direction: column;

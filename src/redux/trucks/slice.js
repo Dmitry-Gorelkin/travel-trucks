@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchTrucks, fetchTrucksNextPage } from './operations';
+import { fetchTrucks, fetchTrucksNextPage, fetchTruckCard } from './operations';
 
 const initialState = {
   items: [],
+  card: {},
   total: 0,
   loading: false,
   error: null,
@@ -35,7 +36,13 @@ const trucksSlice = createSlice({
         state.items.push(...action.payload.items);
         state.loading = false;
       })
-      .addCase(fetchTrucksNextPage.rejected, handleRejected),
+      .addCase(fetchTrucksNextPage.rejected, handleRejected)
+      .addCase(fetchTruckCard.pending, handlePending)
+      .addCase(fetchTruckCard.fulfilled, (state, action) => {
+        state.card = action.payload;
+        state.loading = false;
+      })
+      .addCase(fetchTruckCard.rejected, handleRejected),
 });
 
 export default trucksSlice.reducer;

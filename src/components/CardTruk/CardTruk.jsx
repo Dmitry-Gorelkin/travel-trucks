@@ -1,6 +1,4 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import icon from '../../assets/icons.svg';
 import CardTrukBooking from '../CardTrukBooking/CardTrukBooking';
 import {
@@ -20,27 +18,7 @@ import {
 } from './CardTruk.styled';
 import LoaderPuff from '../UI/LoaderPuff/LoaderPuff';
 
-const CardTruk = () => {
-  const { id } = useParams();
-  const [truk, setTruk] = useState({});
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const fetch = async () => {
-      setLoading(true);
-      try {
-        const respons = await axios(`https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers/${id}`);
-
-        setTruk(respons.data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetch();
-  }, [id]);
-
+const CardTruk = ({ truk, loading }) => {
   return (
     <>
       {loading ? (

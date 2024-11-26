@@ -38,3 +38,13 @@ export const fetchTrucksNextPage = createAsyncThunk(
     }
   }
 );
+
+export const fetchTruckCard = createAsyncThunk('trucks/fetchTruckCard', async (id, thunkAPI) => {
+  try {
+    const response = await axiosInstance(`/${id}`);
+
+    return response.data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
