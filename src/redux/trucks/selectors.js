@@ -1,5 +1,7 @@
 export const selectTrucks = state => state.trucks.items;
 
-export const selectLoadingTrucks = state => state.trucks.loading;
+export const selectTrucksTotal = state => state.trucks.total;
 
-export const selectErrorTrucks = state => state.trucks.error;
+export const selectTrucksLoading = state => state.trucks.loading;
+
+export const selectTrucksError = state => state.trucks.error;
