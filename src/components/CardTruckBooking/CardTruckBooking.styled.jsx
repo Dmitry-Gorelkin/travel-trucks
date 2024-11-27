@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ErrorMessage, Field, Form } from 'formik';
 
-export const CardTrukBookingContainer = styled.div`
+export const CardTruckBookingContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -16,7 +16,7 @@ export const CardTrukBookingContainer = styled.div`
   border-radius: 10px;
 `;
 
-export const CardTrukBookingTitle = styled.p`
+export const CardTruckBookingTitle = styled.p`
   display: block;
   margin-bottom: 8px;
 
@@ -27,7 +27,7 @@ export const CardTrukBookingTitle = styled.p`
   text-align: left;
 `;
 
-export const CardTrukBookingText = styled.p`
+export const CardTruckBookingText = styled.p`
   display: block;
 
   font-family: Inter;
@@ -37,7 +37,7 @@ export const CardTrukBookingText = styled.p`
   text-align: left;
 `;
 
-export const CardTrukBookingForm = styled(Form)`
+export const CardTruckBookingForm = styled(Form)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,12 +45,12 @@ export const CardTrukBookingForm = styled(Form)`
   gap: 14px;
 `;
 
-export const CardTrukBookingFormContainer = styled.div`
+export const CardTruckBookingFormContainer = styled.div`
   display: block;
   width: 100%;
 `;
 
-export const CardTrukBookingFormField = styled(Field)`
+export const CardTruckBookingFormField = styled(Field)`
   display: block;
   width: 100%;
   height: 60px;
@@ -83,7 +83,7 @@ export const CardTrukBookingFormField = styled(Field)`
   `}
 `;
 
-export const CardTrukBookingFormErrorMessage = styled(ErrorMessage)`
+export const CardTruckBookingFormErrorMessage = styled(ErrorMessage)`
   padding-left: 18px;
 
   color: ${p => p.theme.colors.buttonHover};

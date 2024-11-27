@@ -39,6 +39,7 @@ export const CatalogFiltersLocationInput = styled.input`
     color: ${p => p.theme.colors.gray};
   }
 `;
+
 export const CatalogFiltersLocationIcon = styled.svg`
   display: block;
 

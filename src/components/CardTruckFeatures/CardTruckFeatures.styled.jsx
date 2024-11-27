@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardTrukFeaturesContainer = styled.div`
+export const CardTruckFeaturesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,7 @@ export const CardTrukFeaturesContainer = styled.div`
   background-color: ${p => p.theme.colors.inputs};
 `;
 
-export const CardTrukFeaturesTitle = styled.p`
+export const CardTruckFeaturesTitle = styled.p`
   display: block;
 
   padding-bottom: 24px;
@@ -32,20 +32,20 @@ export const CardTrukFeaturesTitle = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CardTrukFeaturesList = styled.li`
+export const CardTruckFeaturesList = styled.ul`
   display: flex;
   flex-direction: column;
 
   gap: 16px;
 `;
 
-export const CardTrukFeaturesItem = styled.li`
+export const CardTruckFeaturesItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 `;
 
-export const CardTrukFeaturesText = styled.span`
+export const CardTruckFeaturesText = styled.span`
   display: block;
 
   font-family: Inter;

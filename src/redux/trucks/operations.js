@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axiosInstance from '../../services/api';
-import { PAGE_DEFAULT, PERPAGE_DEFAULT } from '../../constants/truks';
+import { PAGE_DEFAULT, PERPAGE_DEFAULT } from '../../constants/trucks';
 
 export const fetchTrucks = createAsyncThunk('trucks/fetchTrucks', async (_, thunkAPI) => {
   try {

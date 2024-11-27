@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const CardTrukContainer = styled.div``;
+export const CardTruckContainer = styled.div``;
 
-export const CardTrukTitleContainer = styled.div`
+export const CardTruckTitleContainer = styled.div`
   margin-bottom: 28px;
 `;
 
-export const CardTrukTitle = styled.h2`
+export const CardTruckTitle = styled.h2`
   margin-bottom: 8px;
 
   font-family: Inter;
@@ -19,7 +19,7 @@ export const CardTrukTitle = styled.h2`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CardTrukReviewsLocationContainer = styled.div`
+export const CardTruckReviewsLocationContainer = styled.div`
   display: flex;
   align-items: center;
 
@@ -28,20 +28,20 @@ export const CardTrukReviewsLocationContainer = styled.div`
   margin-bottom: 16px;
 `;
 
-export const CardTrukReviewsLocationBox = styled.div`
+export const CardTruckReviewsLocationBox = styled.div`
   display: flex;
   align-items: center;
 
   gap: 4px;
 `;
 
-export const CardTrukReviewsLocationIcon = styled.svg`
+export const CardTruckReviewsLocationIcon = styled.svg`
   display: block;
   width: 16px;
   height: 16px;
 `;
 
-export const CardTrukReviewsLocationText = styled.p`
+export const CardTruckReviewsLocationText = styled.p`
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -51,7 +51,7 @@ export const CardTrukReviewsLocationText = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CardTrukPrice = styled.p`
+export const CardTruckPrice = styled.p`
   display: block;
 
   font-family: Inter;
@@ -63,7 +63,7 @@ export const CardTrukPrice = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CardTrukImageList = styled.ul`
+export const CardTruckImageList = styled.ul`
   display: flex;
   flex-wrap: wrap;
 
@@ -72,7 +72,7 @@ export const CardTrukImageList = styled.ul`
   margin-bottom: 28px;
 `;
 
-export const CardTrukImage = styled.img`
+export const CardTruckImage = styled.img`
   display: block;
 
   width: 292px;
@@ -83,7 +83,7 @@ export const CardTrukImage = styled.img`
   object-fit: cover;
 `;
 
-export const CardTrukDescriptionText = styled.p`
+export const CardTruckDescriptionText = styled.p`
   display: block;
 
   margin-bottom: 60px;
@@ -97,7 +97,7 @@ export const CardTrukDescriptionText = styled.p`
   color: ${p => p.theme.colors.text};
 `;
 
-export const CardTrukFeaturesReviewsList = styled.div`
+export const CardTruckFeaturesReviewsList = styled.div`
   display: flex;
 
   gap: 40px;
@@ -108,7 +108,7 @@ export const CardTrukFeaturesReviewsList = styled.div`
   border-bottom: 1px solid ${p => p.theme.colors.grayLight};
 `;
 
-export const CardTrukFeaturesReviewsItem = styled(NavLink)`
+export const CardTruckFeaturesReviewsItem = styled(NavLink)`
   font-family: Inter;
   font-size: 20px;
   font-weight: 600;
@@ -142,7 +142,7 @@ export const CardTrukFeaturesReviewsItem = styled(NavLink)`
   }
 `;
 
-export const CardTrukFeaturesReviewsBookingContainer = styled.div`
+export const CardTruckFeaturesReviewsBookingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CatalogTruksContainer = styled.div`
+export const CatalogTrucksContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const CatalogTruksContainer = styled.div`
   gap: 40px;
 `;
 
-export const CatalogTruksList = styled.ul`
+export const CatalogTrucksList = styled.ul`
   display: flex;
   flex-direction: column;
 

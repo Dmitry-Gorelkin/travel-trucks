@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CatalogTruksCardContainer = styled.li`
+export const CatalogTrucksCardContainer = styled.li`
   display: flex;
   gap: 24px;
 
@@ -10,7 +10,7 @@ export const CatalogTruksCardContainer = styled.li`
   border-radius: 20px;
 `;
 
-export const CatalogTruksCardImg = styled.img`
+export const CatalogTrucksCardImg = styled.img`
   width: 292px;
   height: 320px;
 
@@ -19,7 +19,7 @@ export const CatalogTruksCardImg = styled.img`
   object-fit: cover;
 `;
 
-export const CatalogTruksCardSpecification = styled.div`
+export const CatalogTrucksCardSpecification = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,14 +28,14 @@ export const CatalogTruksCardSpecification = styled.div`
   height: 320px;
 `;
 
-export const CatalogTruksCardTitleBox = styled.div`
+export const CatalogTrucksCardTitleBox = styled.div`
   display: flex;
   justify-content: space-between;
 
   margin-bottom: 8px;
 `;
 
-export const CatalogTruksCardTitle = styled.p`
+export const CatalogTrucksCardTitle = styled.p`
   font-family: Inter;
   font-size: 24px;
   font-weight: 600;
@@ -45,39 +45,39 @@ export const CatalogTruksCardTitle = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CatalogTruksCardIconFavorites = styled.svg`
+export const CatalogTrucksCardIconFavorites = styled.svg`
   display: block;
   width: 26px;
   height: 24px;
 `;
 
-export const CatalogTruksCardPriceBox = styled.div`
+export const CatalogTrucksCardPriceBox = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
 `;
 
-export const CatalogTruksCardReviewsLocationContainer = styled.div`
+export const CatalogTrucksCardReviewsLocationContainer = styled.div`
   display: flex;
   align-items: center;
 
   gap: 16px;
 `;
 
-export const CatalogTruksCardReviewsLocationBox = styled.div`
+export const CatalogTrucksCardReviewsLocationBox = styled.div`
   display: flex;
   align-items: center;
 
   gap: 4px;
 `;
 
-export const CatalogTruksCardIconStar = styled.svg`
+export const CatalogTrucksCardIconStar = styled.svg`
   display: block;
   width: 16px;
   height: 16px;
 `;
 
-export const CatalogTruksCardText = styled.p`
+export const CatalogTrucksCardText = styled.p`
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
@@ -87,13 +87,13 @@ export const CatalogTruksCardText = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CatalogTruksCardIconMap = styled.svg`
+export const CatalogTrucksCardIconMap = styled.svg`
   display: block;
   width: 16px;
   height: 16px;
 `;
 
-export const CatalogTruksCardDescription = styled.p`
+export const CatalogTrucksCardDescription = styled.p`
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;

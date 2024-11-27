@@ -1,14 +1,14 @@
 import { Container } from '../../components/UI/Conteiner/Conteiner.styled';
 import { CatalogPageContainer } from './CatalogPage.styled';
 import CatalogFilters from '../../components/CatalogFilters/CatalogFilters';
-import CatalogTruks from '../../components/CatalogTruks/CatalogTruks';
+import CatalogTrucks from '../../components/CatalogTrucks/CatalogTrucks';
 
 const CatalogPage = () => {
   return (
     <Container>
       <CatalogPageContainer>
         <CatalogFilters />
-        <CatalogTruks />
+        <CatalogTrucks />
       </CatalogPageContainer>
     </Container>
   );

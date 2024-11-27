@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const TrukCategoriesListContainer = styled.div`
+export const TruckCategoriesListContainer = styled.ul`
   display: flex;
 
   flex-wrap: wrap;
   gap: 8px;
 `;
 
-export const TrukCategoriesListItem = styled.li`
+export const TruckCategoriesListItem = styled.li`
   display: flex;
   gap: 8px;
 
@@ -18,13 +18,13 @@ export const TrukCategoriesListItem = styled.li`
   background-color: ${p => p.theme.colors.badges};
 `;
 
-export const TrukCategoriesListIcon = styled.svg`
+export const TruckCategoriesListIcon = styled.svg`
   display: block;
   width: 20px;
   height: 20px;
 `;
 
-export const TrukCategoriesListText = styled.span`
+export const TruckCategoriesListText = styled.span`
   display: block;
 
   font-family: Inter;

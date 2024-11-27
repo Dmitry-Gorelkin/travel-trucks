@@ -1,16 +1,16 @@
-import CardTruk from '../../components/CardTruk/CardTruk';
+import CardTruck from '../../components/CardTruck/CardTruck';
 import { Container } from '../../components/UI/Conteiner/Conteiner.styled';
-import { CardTrukPageContainer } from './CardTrukPage.styled';
+import { CardTruckPageContainer } from './CardTruckPage.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchTruckCard } from '../../redux/trucks/operations';
 import { selectTruckCard, selectTrucksLoading } from '../../redux/trucks/selectors';
 
-const CardTrukPage = () => {
+const CardTruckPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const truk = useSelector(selectTruckCard);
+  const truck = useSelector(selectTruckCard);
   const loading = useSelector(selectTrucksLoading);
 
   useEffect(() => {
@@ -19,11 +19,11 @@ const CardTrukPage = () => {
 
   return (
     <Container>
-      <CardTrukPageContainer>
-        <CardTruk truk={truk} loading={loading} />
-      </CardTrukPageContainer>
+      <CardTruckPageContainer>
+        <CardTruck truck={truck} loading={loading} />
+      </CardTruckPageContainer>
     </Container>
   );
 };
 
-export default CardTrukPage;
+export default CardTruckPage;

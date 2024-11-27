@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const CardTrukReviewsContainer = styled.div`
+export const CardTruckReviewsContainer = styled.div`
   width: 631px;
   height: 588px;
 `;
 
-export const CardTrukReviewsList = styled.ul`
+export const CardTruckReviewsList = styled.ul`
   display: flex;
   flex-direction: column;
 
@@ -14,20 +14,20 @@ export const CardTrukReviewsList = styled.ul`
   gap: 16px;
 `;
 
-export const CardTrukReviewsItem = styled.li`
+export const CardTruckReviewsItem = styled.li`
   display: flex;
   flex-direction: column;
 
   gap: 16px;
 `;
 
-export const CardTrukReviewsCaption = styled.div`
+export const CardTruckReviewsCaption = styled.div`
   display: flex;
 
   gap: 16px;
 `;
 
-export const CardTrukReviewsAvatar = styled.div`
+export const CardTruckReviewsAvatar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@ export const CardTrukReviewsAvatar = styled.div`
   background-color: ${p => p.theme.colors.badges};
 `;
 
-export const CardTrukReviewsAvatarText = styled.span`
+export const CardTruckReviewsAvatarText = styled.span`
   display: block;
 
   font-family: Inter;
@@ -52,14 +52,14 @@ export const CardTrukReviewsAvatarText = styled.span`
   color: ${p => p.theme.colors.button};
 `;
 
-export const CardTrukReviewsNameRatingBox = styled.div`
+export const CardTruckReviewsNameRatingBox = styled.div`
   display: block;
 
   padding-top: 8px;
   padding-bottom: 8px;
 `;
 
-export const CardTrukReviewsName = styled.p`
+export const CardTruckReviewsName = styled.p`
   display: block;
   margin-bottom: 4px;
 
@@ -72,7 +72,7 @@ export const CardTrukReviewsName = styled.p`
   color: ${p => p.theme.colors.main};
 `;
 
-export const CardTrukReviewsComments = styled.p`
+export const CardTruckReviewsComments = styled.p`
   display: block;
 
   font-family: Inter;

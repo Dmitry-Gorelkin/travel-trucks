@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ButtonLoadMore } from '../UI/ButtonLoadMore/ButtonLoadMore';
-import { CatalogTruksContainer, CatalogTruksList } from './CatalogTruks.styled';
-import CatalogTruksCard from '../CatalogTruksCard/CatalogTruksCard';
+import { CatalogTrucksContainer, CatalogTrucksList } from './CatalogTrucks.styled';
+import CatalogTrucksCard from '../CatalogTrucksCard/CatalogTrucksCard';
 import LoaderPuff from '../UI/LoaderPuff/LoaderPuff';
 import { fetchTrucks, fetchTrucksNextPage } from '../../redux/trucks/operations';
 import { selectTrucksLoading, selectTrucks, selectTrucksTotal } from '../../redux/trucks/selectors';
 
-const CatalogTruks = () => {
+const CatalogTrucks = () => {
   const dispatch = useDispatch();
-  const truks = useSelector(selectTrucks);
+  const trucks = useSelector(selectTrucks);
   const total = useSelector(selectTrucksTotal);
   const loading = useSelector(selectTrucksLoading);
   const [page, setPage] = useState(1);
@@ -20,23 +20,23 @@ const CatalogTruks = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    truks.length < total ? setVisibilityLoadMore(true) : setVisibilityLoadMore(false);
-  }, [truks, total]);
+    trucks.length < total ? setVisibilityLoadMore(true) : setVisibilityLoadMore(false);
+  }, [trucks, total]);
 
   function nextPage() {
-    if (truks.length < total) {
+    if (trucks.length < total) {
       dispatch(fetchTrucksNextPage(page + 1));
       setPage(p => p + 1);
     }
   }
 
   return (
-    <CatalogTruksContainer>
-      <CatalogTruksList>
-        {truks.map(e => (
-          <CatalogTruksCard key={e.id} truk={e} />
+    <CatalogTrucksContainer>
+      <CatalogTrucksList>
+        {trucks.map(e => (
+          <CatalogTrucksCard key={e.id} truck={e} />
         ))}
-      </CatalogTruksList>
+      </CatalogTrucksList>
 
       <div>
         {loading ? (
@@ -47,8 +47,8 @@ const CatalogTruks = () => {
           <></>
         )}
       </div>
-    </CatalogTruksContainer>
+    </CatalogTrucksContainer>
   );
 };
 
-export default CatalogTruks;
+export default CatalogTrucks;
