@@ -37,7 +37,9 @@ const CatalogTrucksCard = ({ truck }) => {
       <CatalogTrucksCardSpecification>
         <div>
           <CatalogTrucksCardTitleBox>
-            <CatalogTrucksCardTitle>{name}</CatalogTrucksCardTitle>
+            <CatalogTrucksCardTitle>
+              {name.length >= 23 ? `${name.slice(0, 20)}...` : name}
+            </CatalogTrucksCardTitle>
             <CatalogTrucksCardPriceBox>
               <CatalogTrucksCardTitle>{`€${price}.00`}</CatalogTrucksCardTitle>
               <CatalogTrucksCardIconFavorites>

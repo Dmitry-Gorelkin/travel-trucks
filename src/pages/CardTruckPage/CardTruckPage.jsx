@@ -5,17 +5,30 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchTruckCard } from '../../redux/trucks/operations';
-import { selectTruckCard, selectTrucksLoading } from '../../redux/trucks/selectors';
+import {
+  selectTruckCard,
+  selectTrucksLoading,
+  selectTrucksError,
+} from '../../redux/trucks/selectors';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import toast from 'react-hot-toast';
 
 const CardTruckPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const truck = useSelector(selectTruckCard);
   const loading = useSelector(selectTrucksLoading);
+  const error = useSelector(selectTrucksError);
 
   useEffect(() => {
     dispatch(fetchTruckCard(id));
   }, [dispatch, id]);
+
+  if (error) {
+    toast.error(error);
+
+    return <NotFoundPage />;
+  }
 
   return (
     <Container>

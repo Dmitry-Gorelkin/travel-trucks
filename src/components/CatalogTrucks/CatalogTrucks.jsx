@@ -5,13 +5,21 @@ import { CatalogTrucksContainer, CatalogTrucksList } from './CatalogTrucks.style
 import CatalogTrucksCard from '../CatalogTrucksCard/CatalogTrucksCard';
 import LoaderPuff from '../UI/LoaderPuff/LoaderPuff';
 import { fetchTrucks, fetchTrucksNextPage } from '../../redux/trucks/operations';
-import { selectTrucksLoading, selectTrucks, selectTrucksTotal } from '../../redux/trucks/selectors';
+import {
+  selectTrucksLoading,
+  selectTrucks,
+  selectTrucksTotal,
+  selectTrucksError,
+} from '../../redux/trucks/selectors';
+import CatalogTrucksNoCampers from '../CatalogTrucksNoCampers/CatalogTrucksNoCampers';
+import toast from 'react-hot-toast';
 
 const CatalogTrucks = () => {
   const dispatch = useDispatch();
   const trucks = useSelector(selectTrucks);
   const total = useSelector(selectTrucksTotal);
   const loading = useSelector(selectTrucksLoading);
+  const error = useSelector(selectTrucksError);
   const [page, setPage] = useState(1);
   const [visibilityLoadMore, setVisibilityLoadMore] = useState(false);
 
@@ -30,6 +38,12 @@ const CatalogTrucks = () => {
     }
   }
 
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+  }, [error]);
+
   return (
     <CatalogTrucksContainer>
       <CatalogTrucksList>
@@ -47,6 +61,8 @@ const CatalogTrucks = () => {
           <></>
         )}
       </div>
+
+      {!loading && trucks.length === 0 && <CatalogTrucksNoCampers />}
     </CatalogTrucksContainer>
   );
 };
