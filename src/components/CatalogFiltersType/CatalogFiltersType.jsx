@@ -56,7 +56,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickEquipment('ac')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#wind`}></use>
+              <use href={`${icon}#ac`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>AC</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -65,7 +65,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickEquipment('automatic')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#diagram`}></use>
+              <use href={`${icon}#automatic`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Automatic</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -74,7 +74,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickEquipment('kitchen')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#cup-hot`}></use>
+              <use href={`${icon}#kitchen`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Kitchen</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -92,7 +92,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickEquipment('bathroom')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#bi_droplet`}></use>
+              <use href={`${icon}#bathroom`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Bathroom</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -108,7 +108,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickType('van')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#bi_grid-1x2`}></use>
+              <use href={`${icon}#van`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Van</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -117,7 +117,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickType('fullyIntegrated')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#bi_grid`}></use>
+              <use href={`${icon}#fullyIntegrated`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Fully Integrated</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
@@ -126,7 +126,7 @@ const CatalogFiltersType = () => {
             onClick={() => handleFilterClickType('alcove')}
           >
             <CatalogFiltersTypeIcon>
-              <use href={`${icon}#bi_grid-3x3-gap`}></use>
+              <use href={`${icon}#alcove`}></use>
             </CatalogFiltersTypeIcon>
             <CatalogFiltersTypeText>Alcove</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>

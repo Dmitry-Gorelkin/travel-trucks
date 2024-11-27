@@ -7,7 +7,19 @@ import {
 } from './TruckCategoriesList.styled';
 
 const TruckCategoriesList = ({ truck }) => {
-  const { transmission, engine, kitchen, ac, tv, radio, bathroom } = truck;
+  const {
+    transmission,
+    engine,
+    kitchen,
+    ac,
+    tv,
+    radio,
+    bathroom,
+    refrigerator,
+    microwave,
+    gas,
+    water,
+  } = truck;
 
   return (
     <>
@@ -15,7 +27,7 @@ const TruckCategoriesList = ({ truck }) => {
         {transmission === 'automatic' && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
-              <use href={`${icon}#diagram`}></use>
+              <use href={`${icon}#automatic`}></use>
             </TruckCategoriesListIcon>
             <TruckCategoriesListText>Automatic</TruckCategoriesListText>
           </TruckCategoriesListItem>
@@ -29,7 +41,7 @@ const TruckCategoriesList = ({ truck }) => {
         {kitchen && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
-              <use href={`${icon}#cup-hot`}></use>
+              <use href={`${icon}#kitchen`}></use>
             </TruckCategoriesListIcon>
             <TruckCategoriesListText>Kitchen</TruckCategoriesListText>
           </TruckCategoriesListItem>
@@ -37,7 +49,7 @@ const TruckCategoriesList = ({ truck }) => {
         {ac && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
-              <use href={`${icon}#wind`}></use>
+              <use href={`${icon}#ac`}></use>
             </TruckCategoriesListIcon>
             <TruckCategoriesListText>AC</TruckCategoriesListText>
           </TruckCategoriesListItem>
@@ -61,9 +73,43 @@ const TruckCategoriesList = ({ truck }) => {
         {bathroom && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
-              <use href={`${icon}#bi_droplet`}></use>
+              <use href={`${icon}#bathroom`}></use>
             </TruckCategoriesListIcon>
             <TruckCategoriesListText>Bathroom</TruckCategoriesListText>
+          </TruckCategoriesListItem>
+        )}
+
+        {refrigerator && (
+          <TruckCategoriesListItem>
+            <TruckCategoriesListIcon>
+              <use href={`${icon}#refrigerator`}></use>
+            </TruckCategoriesListIcon>
+            <TruckCategoriesListText>Refrigerator</TruckCategoriesListText>
+          </TruckCategoriesListItem>
+        )}
+
+        {microwave && (
+          <TruckCategoriesListItem>
+            <TruckCategoriesListIcon>
+              <use href={`${icon}#microwave`}></use>
+            </TruckCategoriesListIcon>
+            <TruckCategoriesListText>Microwave</TruckCategoriesListText>
+          </TruckCategoriesListItem>
+        )}
+        {gas && (
+          <TruckCategoriesListItem>
+            <TruckCategoriesListIcon>
+              <use href={`${icon}#gas`}></use>
+            </TruckCategoriesListIcon>
+            <TruckCategoriesListText>Gas</TruckCategoriesListText>
+          </TruckCategoriesListItem>
+        )}
+        {water && (
+          <TruckCategoriesListItem>
+            <TruckCategoriesListIcon>
+              <use href={`${icon}#water`}></use>
+            </TruckCategoriesListIcon>
+            <TruckCategoriesListText>Water</TruckCategoriesListText>
           </TruckCategoriesListItem>
         )}
       </TruckCategoriesListContainer>
