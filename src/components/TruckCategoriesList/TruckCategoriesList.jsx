@@ -11,8 +11,8 @@ const TruckCategoriesList = ({ truck }) => {
     transmission,
     engine,
     kitchen,
-    ac,
-    tv,
+    AC,
+    TV,
     radio,
     bathroom,
     refrigerator,
@@ -46,7 +46,7 @@ const TruckCategoriesList = ({ truck }) => {
             <TruckCategoriesListText>Kitchen</TruckCategoriesListText>
           </TruckCategoriesListItem>
         )}
-        {ac && (
+        {AC && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
               <use href={`${icon}#ac`}></use>
@@ -54,7 +54,7 @@ const TruckCategoriesList = ({ truck }) => {
             <TruckCategoriesListText>AC</TruckCategoriesListText>
           </TruckCategoriesListItem>
         )}
-        {tv && (
+        {TV && (
           <TruckCategoriesListItem>
             <TruckCategoriesListIcon>
               <use href={`${icon}#tv`}></use>

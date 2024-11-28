@@ -8,7 +8,7 @@ import {
   CatalogFiltersTypeText,
 } from './CatalogFiltersType.styled';
 import icon from '../../assets/icons.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const initialFilter = {
   ac: false,
@@ -16,7 +16,7 @@ const initialFilter = {
   kitchen: false,
   tv: false,
   bathroom: false,
-  type: '',
+  form: '',
 };
 
 const CatalogFiltersType = () => {
@@ -29,19 +29,23 @@ const CatalogFiltersType = () => {
     }));
   };
 
-  const handleFilterClickType = filterName => {
+  const handleFilterClickForm = filterName => {
     setFilter(prev =>
-      prev.type === filterName
+      prev.form === filterName
         ? {
             ...prev,
-            type: '',
+            form: '',
           }
         : {
             ...prev,
-            type: filterName,
+            form: filterName,
           }
     );
   };
+
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
 
   return (
     <CatalogFiltersTypeContainer>
@@ -104,8 +108,8 @@ const CatalogFiltersType = () => {
 
         <CatalogFiltersTypeList>
           <CatalogFiltersTypeItem
-            active={(filter.type === 'van').toString()}
-            onClick={() => handleFilterClickType('van')}
+            active={(filter.form === 'panelTruck').toString()}
+            onClick={() => handleFilterClickForm('panelTruck')}
           >
             <CatalogFiltersTypeIcon>
               <use href={`${icon}#van`}></use>
@@ -113,8 +117,8 @@ const CatalogFiltersType = () => {
             <CatalogFiltersTypeText>Van</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
           <CatalogFiltersTypeItem
-            active={(filter.type === 'fullyIntegrated').toString()}
-            onClick={() => handleFilterClickType('fullyIntegrated')}
+            active={(filter.form === 'fullyIntegrated').toString()}
+            onClick={() => handleFilterClickForm('fullyIntegrated')}
           >
             <CatalogFiltersTypeIcon>
               <use href={`${icon}#fullyIntegrated`}></use>
@@ -122,8 +126,8 @@ const CatalogFiltersType = () => {
             <CatalogFiltersTypeText>Fully Integrated</CatalogFiltersTypeText>
           </CatalogFiltersTypeItem>
           <CatalogFiltersTypeItem
-            active={(filter.type === 'alcove').toString()}
-            onClick={() => handleFilterClickType('alcove')}
+            active={(filter.form === 'alcove').toString()}
+            onClick={() => handleFilterClickForm('alcove')}
           >
             <CatalogFiltersTypeIcon>
               <use href={`${icon}#alcove`}></use>
