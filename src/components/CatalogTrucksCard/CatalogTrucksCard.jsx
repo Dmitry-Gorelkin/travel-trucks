@@ -17,9 +17,9 @@ import {
   CatalogTrucksCardIconMap,
   CatalogTrucksCardDescription,
 } from './CatalogTrucksCard.styled';
+import { useEffect, useState } from 'react';
 
 const CatalogTrucksCard = ({ truck }) => {
-  const navigate = useNavigate();
   const {
     id,
     gallery = [],
@@ -30,6 +30,20 @@ const CatalogTrucksCard = ({ truck }) => {
     location = '',
     description = '',
   } = truck;
+
+  const navigate = useNavigate();
+  const [like, setLike] = useState(() =>
+    (JSON.parse(localStorage.getItem('like')) || []).includes(id)
+  );
+
+  useEffect(() => {
+    const storedArray = JSON.parse(localStorage.getItem('like')) || [];
+    const updatedArray = like
+      ? [...new Set([...storedArray, id])]
+      : [...new Set(storedArray.filter(e => e !== id))];
+
+    localStorage.setItem('like', JSON.stringify(updatedArray));
+  }, [id, like]);
 
   return (
     <CatalogTrucksCardContainer>
@@ -42,7 +56,10 @@ const CatalogTrucksCard = ({ truck }) => {
             </CatalogTrucksCardTitle>
             <CatalogTrucksCardPriceBox>
               <CatalogTrucksCardTitle>{`€${price}.00`}</CatalogTrucksCardTitle>
-              <CatalogTrucksCardIconFavorites>
+              <CatalogTrucksCardIconFavorites
+                like={like.toString()}
+                onClick={() => setLike(p => !p)}
+              >
                 <use href={`${icon}#heart`}></use>
               </CatalogTrucksCardIconFavorites>
             </CatalogTrucksCardPriceBox>

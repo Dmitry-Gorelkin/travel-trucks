@@ -49,6 +49,10 @@ export const CatalogTrucksCardIconFavorites = styled.svg`
   display: block;
   width: 26px;
   height: 24px;
+
+  cursor: pointer;
+
+  fill: ${p => (p.like === 'true' ? p.theme.colors.button : p.theme.colors.main)};
 `;
 
 export const CatalogTrucksCardPriceBox = styled.div`
