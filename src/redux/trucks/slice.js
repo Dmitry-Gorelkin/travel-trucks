@@ -3,7 +3,6 @@ import { fetchTrucks, fetchTrucksNextPage, fetchTruckCard } from './operations';
 
 const filter = {
   AC: false,
-  automatic: false,
   kitchen: false,
   TV: false,
   bathroom: false,
