@@ -42,7 +42,10 @@ const trucksSlice = createSlice({
   },
   extraReducers: builder =>
     builder
-      .addCase(fetchTrucks.pending, handlePending)
+      .addCase(fetchTrucks.pending, state => {
+        handlePending(state);
+        state.items = [];
+      })
       .addCase(fetchTrucks.fulfilled, (state, action) => {
         state.items = action.payload.items;
         state.total = action.payload.total;
