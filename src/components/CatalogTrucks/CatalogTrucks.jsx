@@ -5,22 +5,15 @@ import { CatalogTrucksContainer, CatalogTrucksList } from './CatalogTrucks.style
 import CatalogTrucksCard from '../CatalogTrucksCard/CatalogTrucksCard';
 import LoaderPuff from '../UI/LoaderPuff/LoaderPuff';
 import { fetchTrucks, fetchTrucksNextPage } from '../../redux/trucks/operations';
-import {
-  selectTrucksLoading,
-  selectTrucks,
-  selectTrucksTotal,
-  selectTrucksError,
-} from '../../redux/trucks/selectors';
+import { selectTrucksLoading, selectTrucks, selectTrucksTotal } from '../../redux/trucks/selectors';
 import CatalogTrucksNoCampers from '../CatalogTrucksNoCampers/CatalogTrucksNoCampers';
-import toast from 'react-hot-toast';
 
-const CatalogTrucks = () => {
+const CatalogTrucks = ({ page, onPageNext, error }) => {
   const dispatch = useDispatch();
   const trucks = useSelector(selectTrucks);
   const total = useSelector(selectTrucksTotal);
   const loading = useSelector(selectTrucksLoading);
-  const error = useSelector(selectTrucksError);
-  const [page, setPage] = useState(1);
+
   const [visibilityLoadMore, setVisibilityLoadMore] = useState(false);
 
   useEffect(() => {
@@ -34,15 +27,9 @@ const CatalogTrucks = () => {
   function nextPage() {
     if (trucks.length < total) {
       dispatch(fetchTrucksNextPage(page + 1));
-      setPage(p => p + 1);
+      onPageNext(p => p + 1);
     }
   }
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
 
   return (
     <CatalogTrucksContainer>
@@ -55,7 +42,7 @@ const CatalogTrucks = () => {
       <div>
         {loading ? (
           <LoaderPuff />
-        ) : visibilityLoadMore ? (
+        ) : visibilityLoadMore && !error ? (
           <ButtonLoadMore onClick={nextPage}>Load more</ButtonLoadMore>
         ) : (
           <></>

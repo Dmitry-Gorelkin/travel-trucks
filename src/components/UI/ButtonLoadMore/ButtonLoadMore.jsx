@@ -10,8 +10,6 @@ export const ButtonLoadMore = styled.button`
 
   padding: 0;
 
-  /* padding: 16px 32px; */ //старое решение
-
   border: 1px solid ${p => p.theme.colors.grayLight};
   border-radius: 200px;
 

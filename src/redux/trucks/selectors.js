@@ -1,5 +1,7 @@
 export const selectTrucks = state => state.trucks.items;
 
+export const selectTrucksFilter = state => state.trucks.filter;
+
 export const selectTruckCard = state => state.trucks.card;
 
 export const selectTruckCardReviews = state => state.trucks.card.reviews;

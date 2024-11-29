@@ -8,8 +8,6 @@ const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 const CatalogPage = lazy(() => import('../pages/CatalogPage/CatalogPage'));
 const CardTruckPage = lazy(() => import('../pages/CardTruckPage/CardTruckPage'));
-// const CardTruckFeatures = lazy(() => import('./CardTruckFeatures/CardTruckFeatures'));
-// const CardTruckReviews = lazy(() => import('./CardTruckReviews/CardTruckReviews'));
 
 function App() {
   return (

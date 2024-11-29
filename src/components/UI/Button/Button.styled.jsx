@@ -10,9 +10,6 @@ export const Button = styled.button`
 
   padding: 0;
 
-  /* display: block; */ //старое решение
-  /* padding: 16px 60px; */ //старое решение
-
   border: none;
   border-radius: 200px;
 

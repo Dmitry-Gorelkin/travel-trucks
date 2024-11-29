@@ -11,8 +11,6 @@ export const ButtonLink = styled(Link)`
 
   padding: 0;
 
-  /* padding: 16px 60px; */ //старое решение
-
   border: none;
   border-radius: 200px;
 

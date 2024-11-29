@@ -1,7 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchTrucks, fetchTrucksNextPage, fetchTruckCard } from './operations';
 
+const filter = {
+  AC: false,
+  automatic: false,
+  kitchen: false,
+  TV: false,
+  bathroom: false,
+  transmission: null,
+  form: null,
+  location: '',
+};
+
 const initialState = {
+  filter,
   items: [],
   card: {},
   total: 0,
@@ -17,11 +29,17 @@ const handlePending = state => {
 const handleRejected = (state, action) => {
   state.error = action.payload;
   state.loading = false;
+  state.items = [];
 };
 
 const trucksSlice = createSlice({
   name: 'trucks',
-  initialState: initialState,
+  initialState,
+  reducers: {
+    updateFilter(state, action) {
+      state.filter = action.payload || filter;
+    },
+  },
   extraReducers: builder =>
     builder
       .addCase(fetchTrucks.pending, handlePending)
@@ -44,5 +62,7 @@ const trucksSlice = createSlice({
       })
       .addCase(fetchTruckCard.rejected, handleRejected),
 });
+
+export const { updateFilter } = trucksSlice.actions;
 
 export default trucksSlice.reducer;
