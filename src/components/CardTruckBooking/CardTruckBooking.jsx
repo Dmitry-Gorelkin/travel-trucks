@@ -10,6 +10,7 @@ import {
   CardTruckBookingText,
   CardTruckBookingTitle,
 } from './CardTruckBooking.styled';
+import toast from 'react-hot-toast';
 
 const initialValues = {
   name: '',
@@ -22,7 +23,6 @@ const CardTruckBooking = () => {
   // Устанавливаем сегодняшнюю дату в формате ISO (YYYY-MM-DD) для использования в валидации
   const today = new Date().toISOString().split('T')[0];
 
-  // Схема валидации
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(2, 'Minimum 2 characters')
@@ -46,8 +46,8 @@ const CardTruckBooking = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, { resetForm }) => {
-          console.log(values); // выводим данные формы в консоль
-          resetForm(); // очищаем форму после отправки
+          toast.success('The application has been sent, we will contact you.');
+          resetForm();
         }}
       >
         {({ isSubmitting }) => (
